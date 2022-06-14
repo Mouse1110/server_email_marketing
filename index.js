@@ -22,6 +22,9 @@ const version = `v${process.env.APPLICATION_VERSION}`;
 const userRouter = require('./routers/user.router')
 app.use(`/${version}/user`, userRouter)
 
+const campaignRouter = require('./routers/campaign.router')
+app.use(`/${version}/campaign`, campaignRouter)
+
 
 app.listen(5000,function(){
     console.log("Running...");
